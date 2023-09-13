@@ -6,8 +6,13 @@ let xAtor = 85;
 let yAtor = 366;
 let larguraAtor = 30;
 let comprimentoAtor = 30;
-let colisao = false 
-let meusPontos = 0
+let colisao = false; 
+let meusPontos = 0;
+let textoMeusPontos = "Pontos:";
+let textoVidas = "Vidas:";
+let vidas = 5;
+
+
 
 // Funções do ator
 
@@ -48,7 +53,9 @@ function incluiPontos (){
   fill(255, 240, 60);
   textAlign(CENTER);
   textSize(25);
-  text(meusPontos, width/5, 27);
+  text(meusPontos, width/4.6, 27);
+  fill(55, 100, 0);
+  text (textoMeusPontos, width/10, 26);
 }
 
 function marcaPontos(){
@@ -66,3 +73,40 @@ function pontosMaiorQueZero(){
 function podeSeMover(){
   return yAtor < 366;
 }
+
+function incluirVidas (){
+  fill (55, 100, 0);
+  textAlign (CENTER);
+  textSize (25);
+  text (textoVidas, 350, 26);
+}
+
+function contaVidas (){
+  fill(255, 240, 60);
+  textAlign(CENTER);
+  textSize(25);
+  text (vidas, 400, 27);
+  if (colisao){
+    vidas -= 1;
+  }
+}
+
+function zeroVidas (){
+  if (vidas <=0) {
+    let resposta = prompt ("Perdeu, Diga seu nome!");
+    if (resposta !== null) {
+      alert (resposta + ", Treine mais!");
+      vidas = 5;
+      window.location.reload();
+    } else { 
+      vidas = 5;
+    }
+     
+
+  }
+}
+
+  
+    
+  
+
