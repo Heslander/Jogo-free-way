@@ -19,8 +19,8 @@ function preload(){
   imagemCarro2 = loadImage("Imagens/carro-2.png");
   imagemCarro3 = loadImage("Imagens/carro-3.png");
   imagemCarros = [imagemCarro1, imagemCarro2, imagemCarro3, imagemCarro1, imagemCarro2, imagemCarro3];
- }
-
-somDaTrilha = loadSound("Sons/trilha.mp3");
-somDaColisao = loadSound("Sons/colidiu.mp3");
-somDoPonto = loadSound("Sons/pontos.wav");
+ 
+  somDaTrilha = loadSound("Sons/trilha.mp3");
+  somDaColisao = loadSound("Sons/colidiu.mp3");
+  somDoPonto = loadSound("Sons/pontos.wav");
+}
