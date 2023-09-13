@@ -1,11 +1,13 @@
-:root{
-  --cor-primaria: ;
-  --cor-secundaria: ;
-  --cor-terciaria: ;
-  --cor-hover: ;
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-  --fonte-primaria: ;
-  --fonte-secundaria: ;
+:root{
+  --cor-primaria: #000000;
+  --cor-secundaria: #f6f6f6;
+  --cor-terciaria: #22d4fd;
+  --cor-hover: #2727;
+
+  --fonte-primaria: 'Krona One', sans-serif;
+  --fonte-secundaria: 'Montserrat', sans-serif ;
 
 }
 
@@ -15,10 +17,23 @@
 
 }
 
-html, body {
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
   margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
+}
+
+.rodape {
+  color: var(--cor-primaria);
+  background-color: var(--cor-terciaria);
+  padding: 3rem;
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 400;
 }
