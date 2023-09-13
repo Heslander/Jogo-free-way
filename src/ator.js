@@ -32,6 +32,7 @@ function verificaColisao(){
     colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarros[i], larguraCarros[i], xAtor, yAtor, 15)
     if(colisao){
         posicaoInicialAtor();
+        somDaColisao.play();
       if (pontosMaiorQueZero()){  
       meusPontos -= 1;
       }  
@@ -53,6 +54,7 @@ function incluiPontos (){
 function marcaPontos(){
   if (yAtor < 15){
     meusPontos += 1;
+    somDoPonto.play();
     posicaoInicialAtor();
   }
 }
