@@ -1,3 +1,20 @@
+:root{
+  --cor-primaria: ;
+  --cor-secundaria: ;
+  --cor-terciaria: ;
+  --cor-hover: ;
+
+  --fonte-primaria: ;
+  --fonte-secundaria: ;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
 html, body {
   margin: 0;
   padding: 0;
