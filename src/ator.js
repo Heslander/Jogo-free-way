@@ -39,8 +39,11 @@ function verificaColisao(){
         posicaoInicialAtor();
         somDaColisao.play();
       if (pontosMaiorQueZero()){  
-      meusPontos -= 1;
-      }  
+        meusPontos -= 1;
+      } 
+      if (vidasMenorQueZero()){
+        vidas -=1;
+      } 
     }
   }
 }
@@ -74,6 +77,14 @@ function podeSeMover(){
   return yAtor < 366;
 }
 
+function contaVidas (){
+  fill(255, 240, 60);
+  textAlign(CENTER);
+  textSize(25);
+  text (vidas, 400, 27);
+  
+}
+
 function incluirVidas (){
   fill (55, 100, 0);
   textAlign (CENTER);
@@ -81,30 +92,19 @@ function incluirVidas (){
   text (textoVidas, 350, 26);
 }
 
-function contaVidas (){
-  fill(255, 240, 60);
-  textAlign(CENTER);
-  textSize(25);
-  text (vidas, 400, 27);
-  if (colisao){
-    vidas -= 1;
-  }
+function vidasMenorQueZero (){
+   return (vidas < 0 || vidas <= 5);
 }
 
-function zeroVidas (){
+function zeroVidas (){ //
   if (vidas <=0) {
-    let resposta = prompt ("Perdeu, Diga seu nome!");
-    if (resposta !== null) {
-      alert (resposta + ", Treine mais!");
-      vidas = 5;
-      window.location.reload();
-    } else { 
-      vidas = 5;
-    }
-     
-
+    alert ("Perdeu!");
+    return vidas = 5; 
   }
+  
+     
 }
+
 
   
     
