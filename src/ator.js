@@ -11,7 +11,9 @@ let meusPontos = 0;
 let textoMeusPontos = "Pontos:";
 let textoVidas = "Vidas:";
 let vidas = 5;
-let nome = registro
+//let ranking = [registro];
+let registro;
+let ident;
 
 
 
@@ -97,15 +99,23 @@ function vidasMenorQueZero (){
    return (vidas < 0 || vidas <= 5);
 }
 
+function chamaPrompt(){
+  ident = prompt ("Diga seu nome, infeliz!");
+}
+
 function zeroVidas (){ 
   if (vidas <=0) {
     alert ("Perdeu");
-    let registro = prompt ("Diga seu nome")
+    chamaPrompt();
     return vidas = 5; 
-  }
-  
-     
+  } 
 }
+
+function ranking (){
+  document.write = (ident);
+}
+
+
 
 
   

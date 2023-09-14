@@ -19,6 +19,7 @@ function draw() {
   incluirVidas ();
   contaVidas ();
   zeroVidas();
+  //ranking();
 
 }
 

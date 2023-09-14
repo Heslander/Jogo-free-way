@@ -37,3 +37,11 @@ canvas {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+.ranking {
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
