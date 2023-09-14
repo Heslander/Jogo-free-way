@@ -96,7 +96,7 @@ function vidasMenorQueZero (){
    return (vidas < 0 || vidas <= 5);
 }
 
-function zeroVidas (){ //
+function zeroVidas (){ 
   if (vidas <=0) {
     alert ("Perdeu!");
     return vidas = 5; 
