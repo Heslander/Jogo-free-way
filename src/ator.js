@@ -101,6 +101,7 @@ function vidasMenorQueZero (){
 
 function chamaPrompt(){
   ident = prompt ("Diga seu nome, infeliz!");
+  return ident;
 }
 
 function zeroVidas (){ 
@@ -111,9 +112,7 @@ function zeroVidas (){
   } 
 }
 
-function ranking (){
-  document.write = (ident);
-}
+
 
 
 
