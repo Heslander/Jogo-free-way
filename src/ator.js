@@ -11,8 +11,6 @@ let meusPontos = 0;
 let textoMeusPontos = "Pontos:";
 let textoVidas = "Vidas:";
 let vidas = 5;
-//let ranking = [registro];
-let registro;
 let ident;
 
 
@@ -30,7 +28,13 @@ function movimentaAtor(){
   if (keyIsDown(DOWN_ARROW)){
     if (podeSeMover()){
     yAtor += 3;
-    }
+    }  
+  }
+  if (keyIsDown(RIGHT_ARROW)){
+    xAtor += 1;
+  }
+  if (keyIsDown(LEFT_ARROW)){
+    xAtor -= 1;
   }  
  }
 

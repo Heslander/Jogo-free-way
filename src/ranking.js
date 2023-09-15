@@ -1,5 +1,8 @@
+
+
 function ranking (){
     document.write = (ident);
+    return ident
   }
 
-  ranking();
+  ranking(ident);
