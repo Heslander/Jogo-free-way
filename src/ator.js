@@ -17,6 +17,7 @@ let nomeJogador = [];
 let li;
 let maiorPonto = 0;
 
+
 // Funções do ator
 
 function mostraAtor(){
@@ -137,7 +138,7 @@ function zeroVidas (){
     }  
     let rankingList = document.getElementById("ranking__list");
     let li = document.createElement("li");
-    li.textContent = `${nomeJogador}  Maior Pontuação: ${maiorPonto}`;
+    li.textContent = `${nomeJogador}  _______: ${maiorPonto}`;
     rankingList.appendChild(li)  ;
     vidas = 5;
     meusPontos = 0;
