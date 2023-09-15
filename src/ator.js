@@ -13,8 +13,9 @@ let textoVidas = "Vidas:";
 let vidas = 5;
 let ident;
 let rankingList = document.getElementById("ranking__list");
-let nomeJogador;
+let nomeJogador = [];
 let li;
+let maiorPonto = 0;
 
 // Funções do ator
 
@@ -126,22 +127,26 @@ function zeroVidas (){
   if (vidas <=0) {
     alert ("Perdeu");
     nomeJogador = chamaPrompt();
+    /*if (ident !== null){
+      nomeJogador.push(ident);
+     } else {
+      return "ABC" ;
+      }*/
+    if (meusPontos > maiorPonto) {
+      maiorPonto = meusPontos;
+    }  
     let rankingList = document.getElementById("ranking__list");
     let li = document.createElement("li");
-    li.textContent = nomeJogador;
-    rankingList.appendChild(li);
-    return vidas = 5; 
-  } 
-}
+    li.textContent = `${nomeJogador}  Maior Pontuação: ${maiorPonto}`;
+    rankingList.appendChild(li)  ;
+    vidas = 5;
+    meusPontos = 0;
 
-function verificar(){
-  if (ident !== null){
-    registro.push(ident);
-  }
-  else {
-    return "ABC" ;
-  }
-}
+    return vidas;
+
+  } 
+} 
+
 
 
 
