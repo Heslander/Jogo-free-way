@@ -12,8 +12,9 @@ let textoMeusPontos = "Pontos:";
 let textoVidas = "Vidas:";
 let vidas = 5;
 let ident;
-
-
+let rankingList = document.getElementById("ranking__list");
+let nomeJogador;
+let li;
 
 // Funções do ator
 
@@ -124,12 +125,23 @@ function chamaPrompt(){
 function zeroVidas (){ 
   if (vidas <=0) {
     alert ("Perdeu");
-    chamaPrompt();
+    nomeJogador = chamaPrompt();
+    let rankingList = document.getElementById("ranking__list");
+    let li = document.createElement("li");
+    li.textContent = nomeJogador;
+    rankingList.appendChild(li);
     return vidas = 5; 
   } 
 }
 
-
+function verificar(){
+  if (ident !== null){
+    registro.push(ident);
+  }
+  else {
+    return "ABC" ;
+  }
+}
 
 
 
