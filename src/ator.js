@@ -31,12 +31,16 @@ function movimentaAtor(){
     }  
   }
   if (keyIsDown(RIGHT_ARROW)){
-    xAtor += 1;
+    if (podeSeMoverParaOsLadosDireito()){
+      xAtor += 1;
+      }
   }
   if (keyIsDown(LEFT_ARROW)){
-    xAtor -= 1;
-  }  
- }
+    if (podeSeMoverParaOsLadosEsquerdo()){
+      xAtor -= 1;
+      }  
+  }
+}
 
 function verificaColisao(){
   //collideRectCircle(x1, y1, width1, height1, cx, cy, diameter)
@@ -57,6 +61,7 @@ function verificaColisao(){
 
 function posicaoInicialAtor (){
   yAtor = 366;
+  xAtor = 85;
 }
 
 function incluiPontos (){
@@ -82,6 +87,14 @@ function pontosMaiorQueZero(){
 
 function podeSeMover(){
   return yAtor < 366;
+}
+
+function podeSeMoverParaOsLadosEsquerdo (){
+  return xAtor > 0
+}
+
+function podeSeMoverParaOsLadosDireito (){
+  return xAtor < 475
 }
 
 function contaVidas (){
