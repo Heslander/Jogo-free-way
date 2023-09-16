@@ -31,11 +31,27 @@ canvas {
 .rodape {
   color: var(--cor-primaria);
   background-color: var(--cor-terciaria);
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
   font-family: var(--fonte-secundaria);
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.tecla {
+  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100% );
+  background-color: var(--cor-secundaria);
+  border-radius: 5px;
+  height: 40px;
+  font-size: 1rem;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 200px;
 }
 
 .ranking {
