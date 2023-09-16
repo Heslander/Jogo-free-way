@@ -20,6 +20,7 @@ function draw() {
   contaVidas ();
   zeroVidas();
   //ranking();
+  recorde ();
 
 }
 

@@ -6,7 +6,8 @@ let ident = []
 let rankingList = document.getElementById("ranking__list");
 let nomeJogador = [];
 let li;
-let maiorPonto = 0;
+let maiorPonto = [0];
+let record;
 
 
 
@@ -68,27 +69,35 @@ function incluiPontos (){
         return "ABC";
     }
     while (ident.length < 9){
-       ident += ' '; 
+       ident += '_'; 
     }
     return ident.slice(0, 9);
 
   }
+
+  function recorde (){
+    if (meusPontos !== 0 ) {
+        maiorPonto.push(meusPontos);
+
+    }
+    record = Math.max(...maiorPonto);
+    return record;
+   }    
+  
   
   function zeroVidas (){ 
     if (vidas <=0) {
       alert ("Perdeu");
-      nomeJogador = chamaPrompt();
-      if (meusPontos > maiorPonto) {
-        maiorPonto = meusPontos;
-      }  
+      nomeJogador = chamaPrompt(); 
       let rankingList = document.getElementById("ranking__list");
       let li = document.createElement("li");
-      li.textContent = `${nomeJogador}  _______: ${maiorPonto}`;
+      li.textContent = `${nomeJogador}______: ${record}`;
       rankingList.appendChild(li)  ;
       vidas = 5;
       meusPontos = 0;
-  
-      return vidas;
+      maiorPonto.splice(1,maiorPonto.length);
+    return vidas;
   
     } 
   } 
+
