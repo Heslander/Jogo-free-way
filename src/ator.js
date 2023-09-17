@@ -76,12 +76,12 @@ teclaBaixo.onclick = function(){
   }
 } */
 
-teclaCima.addEventListener('mousedown', function(){
+teclaCima.addEventListener('touchstart', function(){
   podeSeMoverParaCima = true;
   moverParaCima();
 });
 
-teclaCima.addEventListener('mouseup', function(){
+teclaCima.addEventListener('touchend', function(){
   podeSeMoverParaCima = false;
 });
 
@@ -92,12 +92,12 @@ function moverParaCima(){
   }
 }
 
-teclaBaixo.addEventListener('mousedown', function(){
+teclaBaixo.addEventListener('touchstar', function(){
   podeSeMoverParaBaixo = true;
   moverParaBaixo();
 });
 
-teclaBaixo.addEventListener('mouseup', function(){
+teclaBaixo.addEventListener('touchend', function(){
   podeSeMoverParaBaixo = false;
 });
 
