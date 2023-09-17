@@ -7,8 +7,10 @@ let yAtor = 366;
 let larguraAtor = 30;
 let comprimentoAtor = 30;
 let colisao = false; 
-var teclaCima = document.querySelector('#cima');
-var teclaBaixo = document.querySelector('#baixo');
+var teclaCima = document.getElementById('cima');
+var teclaBaixo = document.getElementById('baixo');
+var podeSeMoverParaCima = false;
+var podeSeMoverParaBaixo = false;
 
 
 
@@ -60,20 +62,50 @@ function posicaoInicialAtor (){
   yAtor = 366;
   xAtor = 85;
 }
+  
 
-function moveCima (){
-    yAtor += 3;
-    }
-
-
-teclaCima.onclick = function(){
+/*teclaCima.onclick = function(){
   if(podeSeMover){
     yAtor -= 3;
   }
 }
     
-teclabaixo.onclick = function(){
-  if(podeSeMover){
+teclaBaixo.onclick = function(){
+  if(podeSeMover()){
     yAtor += 3;
   }
-} 
+} */
+
+teclaCima.addEventListener('mousedown', function(){
+  podeSeMoverParaCima = true;
+  moverParaCima();
+});
+
+teclaCima.addEventListener('mouseup', function(){
+  podeSeMoverParaCima = false;
+});
+
+function moverParaCima(){
+  if (podeSeMoverParaCima){
+    yAtor -= 3;
+    requestAnimationFrame(moverParaCima);
+  }
+}
+
+teclaBaixo.addEventListener('mousedown', function(){
+  podeSeMoverParaBaixo = true;
+  moverParaBaixo();
+});
+
+teclaBaixo.addEventListener('mouseup', function(){
+  podeSeMoverParaBaixo = false;
+});
+
+function moverParaBaixo(){
+  if (podeSeMoverParaBaixo && yAtor < 366){
+    yAtor += 3;
+    requestAnimationFrame(moverParaBaixo);
+  }
+}
+
+

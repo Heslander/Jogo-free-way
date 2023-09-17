@@ -17,6 +17,13 @@
 
 }
 
+.header{
+  color: var(--cor-hover);
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 body {
   box-sizing: border-box;
   background-color: var(--cor-primaria);
@@ -68,4 +75,5 @@ canvas {
   font-size: 1rem;
   font-weight: 400;
 }
+
 

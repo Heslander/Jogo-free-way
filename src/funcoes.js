@@ -87,7 +87,7 @@ function incluiPontos (){
   
   function zeroVidas (){ 
     if (vidas <=0) {
-      alert ("Perdeu");
+      alert ("Perdeu otário! o Heslander é melhor!!!");
       nomeJogador = chamaPrompt(); 
       let rankingList = document.getElementById("ranking__list");
       let li = document.createElement("li");
