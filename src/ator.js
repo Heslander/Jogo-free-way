@@ -92,7 +92,7 @@ function moverParaCima(){
   }
 }
 
-teclaBaixo.addEventListener('touchstar', function(){
+teclaBaixo.addEventListener('touchstart', function(){
   podeSeMoverParaBaixo = true;
   moverParaBaixo();
 });
@@ -102,7 +102,7 @@ teclaBaixo.addEventListener('touchend', function(){
 });
 
 function moverParaBaixo(){
-  if (podeSeMoverParaBaixo && yAtor < 366){
+  if (podeSeMoverParaBaixo){
     yAtor += 3;
     requestAnimationFrame(moverParaBaixo);
   }
