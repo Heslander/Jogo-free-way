@@ -102,7 +102,7 @@ teclaBaixo.addEventListener('touchend', function(){
 });
 
 function moverParaBaixo(){
-  if (podeSeMoverParaBaixo){
+  if (podeSeMoverParaBaixo && yAtor < 366){
     yAtor += 3;
     requestAnimationFrame(moverParaBaixo);
   }
