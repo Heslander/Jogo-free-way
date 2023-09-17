@@ -18,9 +18,8 @@
 }
 
 .header{
-  color: var(--cor-hover);
+  color: #32cd32;
   font-family: var(--fonte-primaria);
-  font-size: 1rem;
   font-weight: 400;
 }
 
