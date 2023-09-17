@@ -7,6 +7,8 @@ let yAtor = 366;
 let larguraAtor = 30;
 let comprimentoAtor = 30;
 let colisao = false; 
+var teclaCima = document.querySelector('#cima');
+var teclaBaixo = document.querySelector('#baixo');
 
 
 
@@ -59,13 +61,19 @@ function posicaoInicialAtor (){
   xAtor = 85;
 }
 
+function moveCima (){
+    yAtor += 3;
+    }
 
 
-
-
-
-
-  
+teclaCima.onclick = function(){
+  if(podeSeMover){
+    yAtor -= 3;
+  }
+}
     
-  
-
+teclabaixo.onclick = function(){
+  if(podeSeMover){
+    yAtor += 3;
+  }
+} 

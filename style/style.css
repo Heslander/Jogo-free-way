@@ -31,7 +31,7 @@ canvas {
 .rodape {
   color: var(--cor-primaria);
   background-color: var(--cor-terciaria);
-  padding: 2rem;
+  padding: 1.2rem;
   text-align: center;
   font-family: var(--fonte-secundaria);
   font-size: 1.5rem;
@@ -50,7 +50,7 @@ canvas {
   align-content: center;
   text-align: center;
   padding: 15px;
-  margin: 5px;
+  margin: 15px;
   margin-left: 130px;
   font-size: 15px;
 }
