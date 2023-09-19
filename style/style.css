@@ -48,16 +48,16 @@ canvas {
   background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100% );
   background-color: var(--cor-secundaria);
   border-radius: 5px;
-  height: 50px;
+  height: 60px;
   font-size: 1rem;
-  gap: 10px;
+  gap: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction:row ;
   align-content: center;
   text-align: center;
-  padding: 15px;
-  margin: 15px;
-  margin-left: 130px;
+  padding: 20px;
+  margin: 20px;
+  margin-left: 140px;
   font-size: 15px;
 }
 
