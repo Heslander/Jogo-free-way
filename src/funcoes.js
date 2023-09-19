@@ -102,7 +102,7 @@ function incluiPontos (){
         meusPontos = 0;
         posicaoInicialAtor();
     }, 1000);
-     return podeSeMoverParaBaixo = true;
+     return podeSeMoverParaCima = false;
       
     } 
     return vidas;
