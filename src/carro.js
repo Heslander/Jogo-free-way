@@ -8,7 +8,7 @@ let xCarros = [600, 600, 600, 600, 600, 600];
 let yCarros = [40, 96, 150, 210, 270, 318];
 let larguraCarros = [40, 40, 40, 40, 40, 40];
 let comprimentoCarros = [ 65, 65, 65, 65, 65, 65];
-let velocidadeCarros = [4, 9, 6, 5, 6, 8];
+let velocidadeCarros = [5.4, 9, 7.4, 6.1, 8, 4.3];
 
 // carro 1
 //let xCarro1 = 600;

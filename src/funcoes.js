@@ -8,6 +8,7 @@ let nomeJogador = [];
 let li;
 let maiorPonto = [0];
 let record;
+let promptExibido = false;
 
 
 
@@ -65,7 +66,7 @@ function incluiPontos (){
   
   function chamaPrompt(){
     ident = prompt ("Diga seu nome, infeliz!");
-    if (ident === null){
+    if (ident === null || ident === ' '){
         return "ABC";
     }
     while (ident.length < 9){
@@ -86,7 +87,7 @@ function incluiPontos (){
   
   
   function zeroVidas (){ 
-    if (vidas <=0) {
+    if (vidas <=0 && !promptExibido) {
       alert ("Perdeu otário! o Heslander é melhor!!!");
       nomeJogador = chamaPrompt(); 
       let rankingList = document.getElementById("ranking__list");
@@ -96,8 +97,14 @@ function incluiPontos (){
       vidas = 5;
       meusPontos = 0;
       maiorPonto.splice(1,maiorPonto.length);
-    return vidas;
-  
+      setTimeout(function () {
+        vidas = 5;
+        meusPontos = 0;
+        posicaoInicialAtor();
+    }, 1000);
+      return posicaoInicialAtor();
+      
     } 
+    return vidas;
   } 
 
