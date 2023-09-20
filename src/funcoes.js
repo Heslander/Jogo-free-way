@@ -102,6 +102,7 @@ function incluiPontos (){
         meusPontos = 0;
         posicaoInicialAtor();
     }, 1000);
+    
      return podeSeMoverParaCima = false;
       
     } 

@@ -54,6 +54,7 @@ function verificaColisao(){
       if (vidasMenorQueZero()){
         vidas -=1;
       } 
+      return podeSeMoverParaCima = false;
     }
   }
 }
